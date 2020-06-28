@@ -292,13 +292,6 @@ class Q_Learning_AI(Player):
             if tuple(possible_next_states[j]) == self.post_last_move_state:
                 considered_moves.append(possible_next_moves[j])
                 
-                
-        #I believe with the updated board.is_game_over() I don't need to use this try statement 
-#         try:
-#             return considered_moves[random.randint(0,len(considered_moves)-1)]
-#         except ValueError:
-#             return []
-        
         return considered_moves[random.randint(0,len(considered_moves)-1)]
 
 def get_number_of_pieces_and_kings(spots, player_id=None):
